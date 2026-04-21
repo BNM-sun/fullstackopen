@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: User opens the SPA page for the first time
+
+    browser->>server: GET /spa
+    server-->>browser: HTML document
+
+    browser->>server: GET main.css
+    server-->>browser: CSS file
+
+    browser->>server: GET main.js
+    server-->>browser: JavaScript file
+
+    browser->>server: GET /data.json
+    server-->>browser: JSON data (notes)
